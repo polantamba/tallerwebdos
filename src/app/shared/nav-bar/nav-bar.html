@@ -1,0 +1,25 @@
+<nav class="sticky top-0 z-50 w-full bg-slate-950/90 backdrop-blur-2xl border-b border-white/5 py-6 font-sans">
+    <div class="max-w-7xl mx-auto px-10 grid grid-cols-3 items-center">
+        
+        <div class="flex justify-start">
+            <a routerLink="/" class="flex items-center gap-3 group">
+                <div  class="w-8 h-8 bg-emerald-500 rounded-lg group-hover:rotate-12 transition-transform duration-500" ></div>
+                <span class="text-xl font-black tracking-tighter text-white uppercase">POL<span class="text-emerald-500">EVENTS</span></span>
+            </a>
+        </div>
+
+        <div class="flex justify-center">
+            <ul class="flex items-center space-x-12 text-[10px] font-black uppercase tracking-[0.4em]">
+                <li><a routerLink="home" class="relative text-slate-400 hover:text-white transition-colors group">Inicio <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span></a></li>
+                <li><a routerLink="servicios" class="relative text-slate-400 hover:text-white transition-colors group">Servicios <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span></a></li>
+                <li><a routerLink="galeria" class="relative text-slate-400 hover:text-white transition-colors group">Galería <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span></a></li>
+                <li><a routerLink="contacto" class="relative text-slate-400 hover:text-white transition-colors group">Contacto <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="flex justify-end">
+            <a routerLink="gestion-eventos" class="px-10 py-3 bg-emerald-500 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-full hover:bg-white transition-all shadow-2xl shadow-emerald-500/20">Gestión</a>
+        </div>
+
+    </div>
+</nav>
