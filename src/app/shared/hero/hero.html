@@ -1,43 +1,60 @@
-<section class="w-full bg-slate-950 pt-24 pb-48 relative">
+<section class="w-full bg-slate-950 pt-32 pb-64 relative overflow-hidden">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px]"></div>
+
     <div class="container relative z-10 mx-auto px-6 text-center">
-        <h1 class="text-6xl lg:text-9xl font-black text-white leading-none tracking-tighter uppercase mb-10">
+        <h1 class="text-7xl lg:text-[10rem] font-black text-white leading-[0.85] tracking-tighter uppercase mb-12">
             {{titulo}}<br>
             <span class="text-emerald-500">{{titulo2}}</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-xl text-slate-300 font-bold tracking-wide leading-relaxed mb-20 uppercase">{{descripcion}}</p>
+        <p class="max-w-3xl mx-auto text-xl text-slate-400 font-bold tracking-[0.2em] leading-relaxed mb-24 uppercase">
+            {{descripcion}}
+        </p>
 
-        <div class="flex justify-center mb-40">
-            <div class="relative w-full lg:w-5/6">
-                <div class="absolute -inset-2 bg-emerald-500/30 blur-xl rounded-[3rem]"></div>
-                <img class="relative w-full h-[650px] object-cover rounded-[3rem] border-4 border-white/10" [src]="imagen">
+        <div class="flex justify-center mb-32">
+            <div class="relative w-full lg:w-11/12 group">
+                <div class="absolute -inset-4 bg-emerald-500/20 blur-2xl rounded-[4rem] group-hover:bg-emerald-500/30 transition-all duration-700"></div>
+                <img class="relative w-full h-[700px] object-cover rounded-[3.5rem] border border-white/10 shadow-2xl" [src]="imagen">
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto -mt-72">
-            <div class="bg-white p-12 rounded-[2rem] shadow-2xl text-left border-b-8 border-emerald-500">
-                <h2 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{{item1}}</h2>
-                <p class="text-slate-600 font-medium text-base mb-10 leading-snug">{{parrafo1}}</p>
-                <div class="flex items-center justify-between pt-6 border-t border-slate-100">
-                    <span class="text-4xl font-black text-slate-900 tracking-tighter">{{precio1}}</span>
-                    <button class="text-xs font-black uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition-colors">{{boton1}}</button>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto -mt-80 relative z-20 px-4">
+            
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl text-left flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-500">
+                <div>
+                    <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest mb-4 block">Plan Básico</span>
+                    <h2 class="text-4xl font-black text-slate-950 mb-6 uppercase tracking-tighter">{{item1}}</h2>
+                    <p class="text-slate-500 font-medium text-lg leading-relaxed mb-12">{{parrafo1}}</p>
+                </div>
+                <div class="flex items-center justify-between pt-8 border-t border-slate-100">
+                    <span class="text-4xl font-black text-slate-950 tracking-tighter">{{precio1}}</span>
+                    <button class="text-xs font-black uppercase tracking-widest text-emerald-600 hover:text-slate-950 transition-colors">{{boton1}}</button>
                 </div>
             </div>
 
-            <div class="bg-slate-900 p-12 rounded-[2rem] shadow-2xl text-left border-b-8 border-white transform md:-translate-y-12">
-                <h2 class="text-3xl font-black text-white mb-4 uppercase tracking-tighter">{{item2}}</h2>
-                <p class="text-slate-400 font-medium text-base mb-10 leading-snug">{{parrafo2}}</p>
-                <div class="flex items-center justify-between pt-6 border-t border-white/10">
+            <div class="bg-slate-900 p-12 rounded-[3rem] shadow-[0_35px_60px_-15px_rgba(16,185,129,0.3)] text-left flex flex-col justify-between transform md:-translate-y-16 border border-emerald-500/30">
+                <div>
+                    <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest mb-4 block">Recomendado</span>
+                    <h2 class="text-4xl font-black text-white mb-6 uppercase tracking-tighter">{{item2}}</h2>
+                    <p class="text-slate-400 font-medium text-lg leading-relaxed mb-12">{{parrafo2}}</p>
+                </div>
+                <div class="flex items-center justify-between pt-8 border-t border-white/10">
                     <span class="text-4xl font-black text-white tracking-tighter">{{precio2}}</span>
-                    <button class="px-8 py-3 bg-emerald-500 text-slate-950 font-black rounded-xl text-xs uppercase tracking-widest hover:bg-white transition-all">{{boton2}}</button>
+                    <button class="px-10 py-4 bg-emerald-500 text-slate-950 font-black rounded-2xl text-xs uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-emerald-500/20">
+                        {{boton2}}
+                    </button>
                 </div>
             </div>
 
-            <div class="bg-white p-12 rounded-[2rem] shadow-2xl text-left border-b-8 border-emerald-500">
-                <h2 class="text-3xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{{item3}}</h2>
-                <p class="text-slate-600 font-medium text-base mb-10 leading-snug">{{parrafo3}}</p>
-                <div class="flex items-center justify-between pt-6 border-t border-slate-100">
-                    <span class="text-4xl font-black text-slate-900 tracking-tighter">{{precio3}}</span>
-                    <button class="text-xs font-black uppercase tracking-widest text-emerald-600 hover:text-slate-900 transition-colors">{{boton3}}</button>
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl text-left flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-500">
+                <div>
+                    <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest mb-4 block">Corporativo</span>
+                    <h2 class="text-4xl font-black text-slate-950 mb-6 uppercase tracking-tighter">{{item3}}</h2>
+                    <p class="text-slate-500 font-medium text-lg leading-relaxed mb-12">{{parrafo3}}</p>
+                </div>
+                <div class="flex items-center justify-between pt-8 border-t border-slate-100">
+                    <span class="text-4xl font-black text-slate-950 tracking-tighter">{{precio3}}</span>
+                    <button class="text-xs font-black uppercase tracking-widest text-emerald-600 hover:text-slate-950 transition-colors">{{boton3}}</button>
                 </div>
             </div>
         </div>
